@@ -1,71 +1,49 @@
 1. Coleta de Dados
-"Os dados do cliente, como CPF, nome e endereço, são solicitados ao usuário com mensagens claras e lidos usando fgets, o que permite entradas com espaços. Após a leitura, o \n residual é removido para evitar problemas de formatação."
+"Os dados do cliente, como CPF, nome e endereço, são solicitados ao usuário com mensagens claras e lidos usando fgets, o que permite 
+entradas com espaços. Após a leitura, o \n residual é removido para evitar problemas de formatação."
+
 2. Validação do CPF
-"Antes de prosseguir, o CPF é validado pela função valida_cpf. Isso garante a integridade dos dados. Caso o CPF seja inválido, uma mensagem de erro é exibida e o cadastro é interrompido."
+"Antes de prosseguir, o CPF é validado pela função valida_cpf. 
+Isso garante a integridade dos dados. Caso o CPF seja inválido, uma mensagem de erro é exibida e o cadastro é interrompido."
+
 3. Confirmação dos Dados
 "Após a coleta, os dados são exibidos ao usuário para confirmação. Isso reduz erros no cadastro e melhora a interação com o sistema."
+
 4. Trabalhando com Arquivos
-"Os dados confirmados são gravados no arquivo clientes.txt. O modo de abertura usado é o a (append), que adiciona os novos dados sem apagar os antigos."
+"Os dados confirmados são gravados no arquivo clientes.txt. O modo de abertura usado é o a (append), que adiciona os novos dados sem 
+apagar os antigos."
 "Para organizar, os campos são separados por ;, facilitando a leitura futura por outros sistemas, como editores de texto ou planilhas."
 "Por fim, o arquivo é fechado com fclose, essencial para garantir que os dados sejam salvos corretamente."
 Encerramento (15 segundos)
-"Essa função demonstra conceitos como validação de entradas, interação com o usuário e manipulação de arquivos. Tudo isso é essencial para criar sistemas confiáveis e eficientes."
+"Essa função demonstra conceitos como validação de entradas, interação com o usuário e manipulação de arquivos. Tudo isso é essencial 
+para criar sistemas confiáveis e eficientes."
 
 
 
 
 Introdução à Função (15 segundos)
-"A função desativar altera o status de um cliente registrado no sistema para 'desativado'. Isso é útil para manter o controle de clientes sem removê-los do histórico. Ela utiliza arquivos para manipular os dados, garantindo persistência e segurança."
+"A função desativar altera o status de um cliente registrado no sistema para 'desativado'. Isso é útil para manter o controle de clientes
+ sem removê-los do histórico. Ela utiliza arquivos para manipular os dados, garantindo persistência e segurança."
 Explicação do Processo (1 minuto e 30 segundos)
-1. Entrada do CPF e Validação
-"O CPF do cliente é solicitado ao usuário. Após a leitura, o caractere \n residual é removido para evitar problemas na comparação com os dados do arquivo."
-2. Abertura de Arquivos
-"O arquivo clientes.txt é aberto no modo de leitura (r), e um arquivo temporário é criado no modo de escrita (w). O temporário é usado para armazenar os dados atualizados, garantindo que o original não seja corrompido durante o processo."
-3. Processamento dos Dados
-"Cada linha do arquivo é lida e comparada ao CPF fornecido. Se o CPF for encontrado e o cliente estiver ativo, seu status é alterado para '0' (desativado). Caso já esteja desativado, uma mensagem é exibida ao usuário."
 
-"Se o CPF não for encontrado, o sistema exibe uma mensagem indicando isso. Todos os dados são reescritos no arquivo temporário, com ou sem alterações."
+1. Entrada do CPF e Validação
+"O CPF do cliente é solicitado ao usuário. Após a leitura, o caractere \n residual é removido para evitar problemas na comparação com os 
+dados do arquivo."
+
+2. Abertura de Arquivos
+"O arquivo clientes.txt é aberto no modo de leitura (r), e um arquivo temporário é criado no modo de escrita (w). 
+O temporário é usado para armazenar os dados atualizados, garantindo que o original não seja corrompido durante o processo."
+
+3. Processamento dos Dados
+"Cada linha do arquivo é lida e comparada ao CPF fornecido. Se o CPF for encontrado e o cliente estiver ativo,
+ seu status é alterado para '0' (desativado). Caso já esteja desativado, uma mensagem é exibida ao usuário."
+
+"Se o CPF não for encontrado, o sistema exibe uma mensagem indicando isso. Todos os dados são reescritos no 
+arquivo temporário, com ou sem alterações."
 
 4. Atualização do Arquivo Original
-"Se o CPF foi encontrado, o arquivo original é excluído, e o temporário é renomeado para substituí-lo. Caso contrário, o arquivo temporário é removido para evitar dados desnecessários."
+"Se o CPF foi encontrado, o arquivo original é excluído, e o temporário é renomeado para substituí-lo. Caso contrário, o arquivo 
+temporário é removido para evitar dados desnecessários."
 Encerramento (15 segundos)
-"Essa função demonstra conceitos de manipulação de arquivos, como leitura, escrita e uso de arquivos temporários para evitar perda de dados. Isso garante a integridade e flexibilidade do sistema de cadastro."
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Introdução (20 segundos)
-"Este código implementa uma animação no console usando a função nome. Ele exibe texto estilizado de maneira gradual, criando um efeito visual dinâmico. Essa abordagem é útil para introduções ou telas iniciais de programas interativos, melhorando a experiência do usuário."
-Como Funciona (1 minuto e 30 segundos)
-1. Função nome
-
-"A função nome utiliza uma sequência de printf para exibir texto estilizado no console. Cada chamada de printf é seguida pela função Sleep(40), que pausa a execução por 40 milissegundos, simulando uma animação de escrita."
-2. Função Sleep
-
-"A função Sleep é uma função da biblioteca <windows.h>. Ela interrompe temporariamente o programa por um tempo especificado em milissegundos. Isso é essencial para criar o efeito visual da animação gradual."
-3. Organização e Visual
-
-"O texto exibido é composto por caracteres especiais e espaçamentos cuidadosamente ajustados, criando uma arte ASCII no console. Essa técnica é conhecida como 'ASCII Art'."
-Fechamento (10 segundos)
-"Esse tipo de recurso é ideal para introduções criativas em programas e é uma maneira de demonstrar o uso de temporização e formatação no console. A combinação de arte ASCII e Sleep torna o visual mais envolvente.
-
-
-
+"Essa função demonstra conceitos de manipulação de arquivos, como leitura, escrita e uso de arquivos temporários para evitar 
+perda de dados. Isso garante a integridade e flexibilidade do sistema de cadastro."
